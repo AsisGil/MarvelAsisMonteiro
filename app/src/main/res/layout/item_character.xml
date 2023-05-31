@@ -1,0 +1,59 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/characterCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout">
+
+            <ImageView
+                android:id="@+id/characterImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/imageViewItemCharacter" />
+
+            <ProgressBar
+                android:id="@+id/progressBarCharacter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:theme="@style/progressBarOrange" />
+            
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/characterNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/relativeLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/font_marvel" />
+
+        <TextView
+            android:id="@+id/characterDescTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/relativeLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/characterNameTextView"
+            android:textSize="14sp"
+            android:layout_marginEnd="10dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
